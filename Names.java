@@ -6,7 +6,14 @@ class Names
       Scanner input = new Scanner(System.in);
       System.out.println("enter ur name:");
       String name = input.nextLine();
-      System.out.println("name:" +name);
-      input.close();
+    if (args.length > 0) {
+        name = args[0];
+        System.out.println("Your name is: " + name);
+    } else {
+        System.out.println("No name provided.");
+    }
+    input.close();
     }
   }
+
+
